@@ -2,11 +2,11 @@ import Card from "@/app/components/Card";
 import HeroSection from "@/app/components/HeroSection";
 
 const images = [
-	"img1.jpg",
-	"img2.jpg",
-	"img3.jpg",
-	"img4.jpg",
-	"img5.jpg",
+	"01hero.jpg",
+	"02hero.jpg",
+	"03hero.jpg",
+	"04hero.jpg",
+	"05hero.jpg",
 ];
 
 export default function Home() {
