@@ -11,10 +11,27 @@ const Card = ({ imgUrl }: { imgUrl: string }) => {
 		target: container,
 	});
 	const [maxScrollY, setMaxScrollY] = useState(Infinity);
-
+	const [dynamicStyles, setDynamicStyles] = useState({
+		scale: 1,
+		filter: 0,
+	});
 	const isInView = useInView(container, {
 		margin: `0px 0px -${100 - vertMargin}% 0px`,
 		once: true,
+	});
+	scrollY.on("change", (scrollY) => {
+		let animationValue = 1;
+		if (scrollY > maxScrollY) {
+			animationValue = Math.max(
+				0,
+				1 - (scrollY - maxScrollY) / 10000,
+			);
+		}
+
+		setDynamicStyles({
+			scale: animationValue,
+			filter: (1 - animationValue) * 100,
+		});
 	});
 	useEffect(() => {
 		if (isInView) {
@@ -25,10 +42,12 @@ const Card = ({ imgUrl }: { imgUrl: string }) => {
 	return (
 		<div
 			ref={container}
-			className="sticky h-[80vh] w-[90vw] overflow-hidden rounded-xl bg-neutral-200"
+			className="sticky h-[80vh] w-[90vw] rounded-xl bg-neutral-200"
 			style={{
 				top: `${vertMargin}vh`,
 				height: `${100 - 2 * vertMargin}vh`,
+				scale: dynamicStyles.scale,
+				filter: `blur(${dynamicStyles.filter}px)`,
 			}}>
 			<Image
 				src={imgUrl}
