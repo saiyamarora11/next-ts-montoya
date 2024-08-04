@@ -30,7 +30,7 @@ const Card = ({ imgUrl }: { imgUrl: string }) => {
 
 		setDynamicStyles({
 			scale: animationValue,
-			filter: (1 - animationValue) * 100,
+			filter: (1 - animationValue) * 10,
 		});
 	});
 	useEffect(() => {
@@ -46,16 +46,21 @@ const Card = ({ imgUrl }: { imgUrl: string }) => {
 			style={{
 				top: `${vertMargin}vh`,
 				height: `${100 - 2 * vertMargin}vh`,
-				scale: dynamicStyles.scale,
-				filter: `blur(${dynamicStyles.filter}px)`,
+				transform: `scale(${dynamicStyles.scale})`,
 			}}>
-			<Image
-				src={imgUrl}
-				alt={imgUrl}
-				fill
-				className="object-cover"
-				sizes="90vw"
-			/>
+			<div
+				className="h-full w-full overflow-hidden rounded-xl"
+				style={{
+					filter: `blur(${dynamicStyles.filter}px)`,
+				}}>
+				<Image
+					src={imgUrl}
+					alt={imgUrl}
+					fill
+					className="object-cover"
+					sizes="90vw"
+				/>
+			</div>
 		</div>
 	);
 };
