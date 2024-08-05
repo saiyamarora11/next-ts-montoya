@@ -1,0 +1,15 @@
+.container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+	background-color: black;
+}
+
+.letter {
+	font-size: 18rem;
+	color: white;
+	margin: 0 0.1rem;
+	display: inline-block;
+	transform-origin: center bottom;
+}
