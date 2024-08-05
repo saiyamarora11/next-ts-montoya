@@ -56,3 +56,7 @@ body {
 .footer-style {
 	@apply flex w-full items-center justify-between bg-black p-4 text-white;
 }
+
+.overlay-title-style {
+	@apply font-sixCaps font-bold text-[2rem] sm:text-[4rem] md:text-[6rem] lg:text-[10rem] xl:text-[14rem];
+}
