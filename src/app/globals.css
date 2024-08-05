@@ -10,50 +10,9 @@
 html {
 	font-family: var(--font-poppins);
 }
-@media (prefers-color-scheme: dark) {
-	:root {
-		--foreground-rgb: 255, 255, 255;
-		--background-start-rgb: 0, 0, 0;
-		--background-end-rgb: 0, 0, 0;
-	}
-}
-/* * {
-	cursor: none;
-} */
-
-/* .cursor {
-	background-color: transparent;
-	border: 1px solid #fff;
-	height: 32px;
-	width: 32px;
-	border-radius: 50%;
-	position: fixed;
-	top: 0;
-	left: 0;
-	backdrop-filter: grayscale(100%);
-	pointer-events: none;
-	mix-blend-mode: difference;
-	z-index: 999;
-} */
-
-body {
-	color: rgb(var(--foreground-rgb));
-	background: linear-gradient(
-			to bottom,
-			transparent,
-			rgb(var(--background-end-rgb))
-		)
-		rgb(var(--background-start-rgb));
-}
-
-@layer utilities {
-	.text-balance {
-		text-wrap: balance;
-	}
-}
 
 .overlay-footer {
-	@apply absolute bottom-0 flex w-full items-end justify-between p-4 text-white;
+	@apply absolute bottom-16 flex w-full items-end justify-between px-14 text-white;
 }
 
 .tag-overlay {

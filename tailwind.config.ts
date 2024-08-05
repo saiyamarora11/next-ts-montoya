@@ -12,6 +12,12 @@ const config: Config = {
 				poppins: ["var(--font-poppins)", "sans-serif"],
 				sixCaps: ["var(--font-six-caps)", "sans-serif"],
 			},
+			fontSize: {
+				"responsive-sm": "6rem",
+				"responsive-md": "8rem",
+				"responsive-lg": "12rem",
+				"responsive-xl": "18rem",
+			},
 		},
 	},
 	plugins: [require("daisyui")],

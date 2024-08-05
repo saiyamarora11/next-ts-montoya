@@ -1,11 +1,15 @@
-import CardScrollSection from "@/app/components/CardScrollSection";
-import AnimationText from "@/app/components/HeroSection";
+import {
+	HeroSection,
+	CardScrollSection,
+	FeatureSection,
+} from "@/app/components";
 
 export default function Home() {
 	return (
 		<main className="flex min-h-screen flex-col items-center">
-			<AnimationText />
+			<HeroSection />
 			<CardScrollSection />
+			<FeatureSection />
 		</main>
 	);
 }
