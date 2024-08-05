@@ -25,7 +25,7 @@ const Skill = ({ children }: { children: ReactNode }) => {
 			ref={element}
 			style={{ opacity, color }}
 			transition={{ duration: 0.5 }}
-			className="text-9xl font-medium">
+			className="font-sixCaps text-[4rem] font-medium sm:text-[5rem] md:text-[7rem] lg:text-[9rem]">
 			{children}
 		</motion.li>
 	);
