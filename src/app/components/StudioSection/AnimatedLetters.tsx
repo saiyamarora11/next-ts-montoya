@@ -9,7 +9,7 @@ const AnimatedLetters = () => {
 			{letters.map((letter, index) => (
 				<motion.div
 					key={index}
-					className="mx-1 font-sixCaps text-responsive-sm text-white sm:text-responsive-md md:text-responsive-lg lg:text-responsive-xl"
+					className="animation-letters-style"
 					whileHover={{
 						scaleY: 1.3,
 						originY: 0.2,

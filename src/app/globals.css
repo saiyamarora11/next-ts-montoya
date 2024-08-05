@@ -48,3 +48,7 @@ body {
 .skills-list {
 	@apply mt-10 flex h-full flex-col items-center justify-center gap-y-5 p-4 text-center font-sixCaps text-[2rem] sm:text-[4rem] md:text-[6rem] lg:text-[10rem] xl:text-[14rem];
 }
+
+.animation-letters-style {
+	@apply mx-1 font-sixCaps text-responsive-sm text-white sm:text-responsive-md md:text-responsive-lg lg:text-responsive-xl;
+}
