@@ -3,6 +3,7 @@
 import { useInView, useScroll } from "framer-motion";
 import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
+import OverlayFooter from "./OverlayFooter";
 
 type CardProps = {
 	imgUrl: string;
@@ -71,11 +72,7 @@ const Card = ({ imgUrl, title }: CardProps) => {
 				className="object-cover"
 				sizes="90vw"
 			/>
-			<div className="overlay-footer">
-				<button className="tag-overlay">2024</button>
-				<h1 className="text-7xl font-bold">{title}</h1>
-				<span className="tag-overlay">PHOTO</span>
-			</div>
+			<OverlayFooter title={title} />
 		</div>
 	);
 };
