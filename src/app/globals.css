@@ -41,3 +41,7 @@ body {
 .tag-overlay {
 	@apply rounded-full bg-white bg-opacity-40 px-4 py-1 text-sm text-white;
 }
+
+.skills-list {
+	@apply mt-10 flex h-full flex-col items-center justify-center gap-y-5 p-4 text-center font-sixCaps text-[2rem] sm:text-[4rem] md:text-[6rem] lg:text-[10rem] xl:text-[14rem];
+}

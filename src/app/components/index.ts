@@ -4,6 +4,7 @@ import CustomCursor from "./CustomCursor";
 import FeatureSection from "./FeatureSection";
 import HeroSection from "./HeroSection";
 import OverlayFooter from "./OverlayFooter";
+import SkillsCoverSection from "./SkillsCoverSection";
 
 export {
 	Card,
@@ -12,4 +13,5 @@ export {
 	FeatureSection,
 	HeroSection,
 	OverlayFooter,
+	SkillsCoverSection,
 };

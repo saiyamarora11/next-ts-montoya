@@ -2,6 +2,7 @@ import {
 	HeroSection,
 	CardScrollSection,
 	FeatureSection,
+	SkillsCoverSection,
 } from "@/app/components";
 
 export default function Home() {
@@ -10,6 +11,7 @@ export default function Home() {
 			<HeroSection />
 			<CardScrollSection />
 			<FeatureSection />
+			<SkillsCoverSection />
 		</main>
 	);
 }
