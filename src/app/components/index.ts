@@ -5,6 +5,7 @@ import FeatureSection from "./FeatureSection";
 import HeroSection from "./HeroSection";
 import OverlayFooter from "./OverlayFooter";
 import SkillsCoverSection from "./SkillsCoverSection";
+import StudioBanner from "./StudioBanner";
 
 export {
 	Card,
@@ -14,4 +15,5 @@ export {
 	HeroSection,
 	OverlayFooter,
 	SkillsCoverSection,
+	StudioBanner,
 };

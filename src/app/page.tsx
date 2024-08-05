@@ -3,6 +3,7 @@ import {
 	CardScrollSection,
 	FeatureSection,
 	SkillsCoverSection,
+	StudioBanner,
 } from "@/app/components";
 
 export default function Home() {
@@ -12,6 +13,7 @@ export default function Home() {
 			<CardScrollSection />
 			<FeatureSection />
 			<SkillsCoverSection />
+			<StudioBanner />
 		</main>
 	);
 }
