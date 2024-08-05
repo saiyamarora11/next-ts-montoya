@@ -9,7 +9,7 @@
 .letter {
 	font-size: 18rem;
 	color: white;
-	margin: 0 0.1rem;
+	margin: 0 4px;
 	display: inline-block;
-	transform-origin: bottom;
+	transform-origin: center;
 }

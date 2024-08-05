@@ -1,5 +1,5 @@
 import Card from "@/app/components/Card";
-import HeroSection from "@/app/components/HeroSection";
+import AnimationText from "@/app/components/HeroSection";
 
 const images = [
 	"01hero.jpg",
@@ -12,8 +12,7 @@ const images = [
 export default function Home() {
 	return (
 		<main className="flex min-h-screen flex-col items-center">
-			{/* <CustomCursor /> */}
-			<HeroSection />
+			<AnimationText />
 			<section className="relative flex flex-col gap-[10vh] py-[10vh]">
 				{images.map((img, idx) => (
 					<Card key={idx} imgUrl={`/${img}`} />

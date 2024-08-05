@@ -1,10 +1,15 @@
 "use client";
+import { FC } from "react";
 import { motion } from "framer-motion";
 import styles from "./AnimatedText.module.css";
 
-const letters = "MONTOYA".split("");
+type AnimatedTextProps = {
+	text: string;
+};
 
-const HeroSection = () => {
+const AnimationText: FC<AnimatedTextProps> = ({ text }) => {
+	const letters = text.split("");
+
 	return (
 		<div className={styles.container}>
 			{letters.map((letter, index) => (
@@ -12,7 +17,7 @@ const HeroSection = () => {
 					key={index}
 					className={styles.letter}
 					whileHover={{
-						scaleY: 1.5,
+						scaleY: 1,
 						originY: 0.5,
 						transition: { duration: 0.3 },
 					}}>
@@ -23,4 +28,4 @@ const HeroSection = () => {
 	);
 };
 
-export default HeroSection;
+export default AnimationText;
