@@ -8,11 +8,9 @@ const config: Config = {
 	],
 	theme: {
 		extend: {
-			backgroundImage: {
-				"gradient-radial":
-					"radial-gradient(var(--tw-gradient-stops))",
-				"gradient-conic":
-					"conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+			fontFamily: {
+				sixCaps: ["var(--font-six-caps)", "sans-serif"],
+				poppins: ["var(--font-poppins)", "sans-serif"],
 			},
 		},
 	},
@@ -21,4 +19,5 @@ const config: Config = {
 		themes: ["dark"],
 	},
 };
+
 export default config;
