@@ -9,8 +9,8 @@ const config: Config = {
 	theme: {
 		extend: {
 			fontFamily: {
-				sixCaps: ["var(--font-six-caps)", "sans-serif"],
 				poppins: ["var(--font-poppins)", "sans-serif"],
+				sixCaps: ["var(--font-six-caps)", "sans-serif"],
 			},
 		},
 	},

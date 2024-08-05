@@ -2,16 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+	--font-six-caps: "__Six_Caps_30fde0", "__Six_Caps_Fallback_30fde0";
+	--font-poppins: "__Poppins_a6f35b", "__Poppins_Fallback_a6f35b";
+}
+
 html {
 	font-family: var(--font-poppins);
 }
-
-:root {
-	--foreground-rgb: 0, 0, 0;
-	--background-start-rgb: 214, 219, 220;
-	--background-end-rgb: 255, 255, 255;
-}
-
 @media (prefers-color-scheme: dark) {
 	:root {
 		--foreground-rgb: 255, 255, 255;
@@ -19,7 +17,6 @@ html {
 		--background-end-rgb: 0, 0, 0;
 	}
 }
-
 /* * {
 	cursor: none;
 } */

@@ -5,7 +5,7 @@ const letters = "MONTOYA".split("");
 
 const HeroSection = () => {
 	return (
-		<div className="font-sixCaps flex h-screen items-center justify-center bg-black">
+		<div className="flex h-screen items-center justify-center bg-black font-sixCaps">
 			{letters.map((letter, index) => (
 				<motion.span
 					key={index}
