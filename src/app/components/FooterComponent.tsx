@@ -8,7 +8,7 @@ const Footer = () => {
 	};
 
 	return (
-		<footer className="flex w-full items-center justify-between bg-black p-4 text-white">
+		<footer className="footer-style">
 			<div
 				className="flex cursor-pointer items-center space-x-4"
 				onClick={scrollToTop}>

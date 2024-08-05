@@ -52,3 +52,7 @@ body {
 .animation-letters-style {
 	@apply mx-1 font-sixCaps text-responsive-sm text-white sm:text-responsive-md md:text-responsive-lg lg:text-responsive-xl;
 }
+
+.footer-style {
+	@apply flex w-full items-center justify-between bg-black p-4 text-white;
+}
