@@ -4,6 +4,7 @@ import {
 	FeatureSection,
 	SkillsCoverSection,
 	StudioBanner,
+	FooterComponent,
 } from "@/app/components";
 
 export default function Home() {
@@ -14,6 +15,7 @@ export default function Home() {
 			<FeatureSection />
 			<SkillsCoverSection />
 			<StudioBanner />
+			<FooterComponent />
 		</main>
 	);
 }

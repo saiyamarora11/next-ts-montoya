@@ -6,6 +6,7 @@ import HeroSection from "./HeroSection";
 import OverlayFooter from "./OverlayFooter";
 import SkillsCoverSection from "./SkillsCoverSection";
 import StudioBanner from "./StudioBanner";
+import FooterComponent from "./FooterComponent";
 
 export {
 	Card,
@@ -16,4 +17,5 @@ export {
 	OverlayFooter,
 	SkillsCoverSection,
 	StudioBanner,
+	FooterComponent,
 };
