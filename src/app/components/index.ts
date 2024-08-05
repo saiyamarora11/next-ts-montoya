@@ -1,3 +1,4 @@
+import Header from "./Header";
 import Card from "./Card";
 import CardScrollSection from "./CardScrollSection";
 import CustomCursor from "./CustomCursor";
@@ -9,6 +10,7 @@ import StudioBanner from "./StudioBanner";
 import FooterComponent from "./FooterComponent";
 
 export {
+	Header,
 	Card,
 	CardScrollSection,
 	CustomCursor,
