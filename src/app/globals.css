@@ -35,7 +35,7 @@ body {
 }
 
 .overlay-footer {
-	@apply absolute bottom-16 flex w-full items-end justify-between px-14 text-white;
+	@apply absolute bottom-8 flex w-full items-baseline justify-between px-14 text-white;
 }
 
 .tag-overlay {
@@ -58,5 +58,5 @@ body {
 }
 
 .overlay-title-style {
-	@apply font-sixCaps font-bold text-[2rem] sm:text-[4rem] md:text-[6rem] lg:text-[10rem] xl:text-[14rem];
+	@apply font-sixCaps text-[4rem] font-bold sm:text-[5rem] md:text-[7rem] lg:text-[8rem] xl:text-[9rem];
 }
