@@ -1,10 +1,15 @@
 import type { Metadata } from "next";
-import { Six_Caps } from "next/font/google";
+import { Six_Caps, Poppins } from "next/font/google";
 import "./globals.css";
 
 const sixCaps = Six_Caps({
 	subsets: ["latin"],
 	weight: ["400"],
+});
+
+const poppins = Poppins({
+	subsets: ["latin"],
+	weight: ["400", "700"],
 });
 
 export const metadata: Metadata = {
@@ -19,7 +24,9 @@ export default function RootLayout({
 }>) {
 	return (
 		<html lang="en">
-			<body className={sixCaps.className}>{children}</body>
+			<body className={sixCaps.className}>
+				<div className={poppins.className}>{children}</div>
+			</body>
 		</html>
 	);
 }

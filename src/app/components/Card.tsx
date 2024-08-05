@@ -4,7 +4,14 @@ import { useInView, useScroll } from "framer-motion";
 import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
 
-const Card = ({ imgUrl }: { imgUrl: string }) => {
+type CardProps = {
+	imgUrl: string;
+	year: string;
+	title: string;
+	type: string;
+};
+
+const Card = ({ imgUrl, title }: CardProps) => {
 	const vertMargin = 10;
 	const container = useRef<HTMLDivElement | null>(null);
 	const [maxScrollY, setMaxScrollY] = useState<number>(Infinity);
@@ -66,6 +73,15 @@ const Card = ({ imgUrl }: { imgUrl: string }) => {
 				className="object-cover"
 				sizes="90vw"
 			/>
+			<div className="absolute bottom-0 flex w-full items-end justify-between p-6 text-white">
+				<button className="rounded-full bg-white bg-opacity-20 px-4 py-1 text-sm text-white">
+					2024
+				</button>
+				<h1 className="text-7xl">{title}</h1>
+				<span className="rounded-full bg-white bg-opacity-20 px-4 py-1 text-sm text-white">
+					PHOTO
+				</span>
+			</div>
 		</div>
 	);
 };
