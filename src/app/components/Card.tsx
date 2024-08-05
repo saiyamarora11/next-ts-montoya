@@ -6,9 +6,7 @@ import { useEffect, useRef, useState } from "react";
 
 type CardProps = {
 	imgUrl: string;
-	year: string;
 	title: string;
-	type: string;
 };
 
 const Card = ({ imgUrl, title }: CardProps) => {
@@ -73,14 +71,10 @@ const Card = ({ imgUrl, title }: CardProps) => {
 				className="object-cover"
 				sizes="90vw"
 			/>
-			<div className="absolute bottom-0 flex w-full items-end justify-between p-6 text-white">
-				<button className="rounded-full bg-white bg-opacity-20 px-4 py-1 text-sm text-white">
-					2024
-				</button>
-				<h1 className="text-7xl">{title}</h1>
-				<span className="rounded-full bg-white bg-opacity-20 px-4 py-1 text-sm text-white">
-					PHOTO
-				</span>
+			<div className="overlay-footer">
+				<button className="tag-overlay">2024</button>
+				<h1 className="text-7xl font-bold">{title}</h1>
+				<span className="tag-overlay">PHOTO</span>
 			</div>
 		</div>
 	);

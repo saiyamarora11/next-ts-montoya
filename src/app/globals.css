@@ -50,3 +50,11 @@ body {
 		text-wrap: balance;
 	}
 }
+
+.overlay-footer {
+	@apply absolute bottom-0 flex w-full items-end justify-between p-4 text-white;
+}
+
+.tag-overlay {
+	@apply rounded-full bg-white bg-opacity-40 px-4 py-1 text-sm text-white;
+}
