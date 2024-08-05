@@ -4,18 +4,7 @@ import styles from "./AnimatedText.module.css";
 
 const letters = "MONTOYA".split("");
 
-const animations = [
-	{ x: 0, y: -20 }, // Move up
-	{ x: 20, y: 0 }, // Move right
-	{ x: 0, y: 20 }, // Move down
-	{ x: -20, y: 0 }, // Move left
-	{ x: 20, y: -20 }, // Move up-right
-	{ x: -20, y: -20 }, // Move up-left
-	{ x: 20, y: 20 }, // Move down-right
-	{ x: -20, y: 20 }, // Move down-left
-];
-
-const AnimatedText = () => {
+const HeroSection = () => {
 	return (
 		<div className={styles.container}>
 			{letters.map((letter, index) => (
@@ -23,7 +12,8 @@ const AnimatedText = () => {
 					key={index}
 					className={styles.letter}
 					whileHover={{
-						...animations[index % animations.length],
+						scaleY: 1,
+						originY: 0.5,
 						transition: { duration: 0.3 },
 					}}>
 					{letter}
@@ -33,4 +23,4 @@ const AnimatedText = () => {
 	);
 };
 
-export default AnimatedText;
+export default HeroSection;
