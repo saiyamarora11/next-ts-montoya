@@ -16,3 +16,5 @@ export const globalStyles = `
     --font-poppins: ${poppins.style.fontFamily};
   }
 `;
+
+export { sixCaps, poppins };

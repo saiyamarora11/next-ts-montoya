@@ -1,16 +1,15 @@
 "use client";
 import { motion } from "framer-motion";
-import styles from "./AnimatedText.module.css";
 
 const letters = "MONTOYA".split("");
 
 const HeroSection = () => {
 	return (
-		<div className={styles.container}>
+		<div className="font-sixCaps flex h-screen items-center justify-center bg-black">
 			{letters.map((letter, index) => (
 				<motion.span
 					key={index}
-					className={styles.letter}
+					className="mx-1 text-[18rem] text-white"
 					whileHover={{
 						scaleY: 1.5,
 						originY: 0.5,
