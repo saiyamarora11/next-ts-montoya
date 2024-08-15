@@ -68,7 +68,7 @@ const Card = ({ imgUrl, title }: CardProps) => {
 				filter: `blur(${dynamicStyles.filter}px)`,
 			}}
 			onMouseEnter={() => setCursorType("card")}
-			onMouseLeave={() => setCursorType("default")}>
+			onMouseLeave={() => setCursorType("")}>
 			<Image
 				src={imgUrl}
 				alt="Card Image"

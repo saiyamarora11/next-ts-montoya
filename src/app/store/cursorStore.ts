@@ -9,7 +9,7 @@ type CursorState = {
 
 const useCursorStore = create<CursorState>((set) => ({
 	isCursorHidden: false,
-	cursorType: "default",
+	cursorType: "",
 	setIsCursorHidden: (hidden) => set({ isCursorHidden: hidden }),
 	setCursorType: (type) => set({ cursorType: type }),
 }));

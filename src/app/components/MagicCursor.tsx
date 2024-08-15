@@ -36,7 +36,7 @@ const MagicCursor: React.FC = () => {
 	}, [cursorType]);
 
 	return (
-		<div>
+		<div className="hidden md:block">
 			{!isCursorHidden && (
 				<motion.div
 					style={{
@@ -44,10 +44,16 @@ const MagicCursor: React.FC = () => {
 						top: smoothMouse.y,
 						transition: "transform 0.2s ease",
 					}}
-					className="magic-cursor">
-					{cursorType && cursorType === "card"
-						? "[ OPEN ]"
-						: "[ About Us ]"}
+					className={`pointer-events-none fixed z-[999] rotate-0 rounded-full ${
+						cursorType
+							? "magic-cursor-expanded"
+							: "magic-cursor-default"
+					}`}>
+					{cursorType
+						? cursorType === "card"
+							? "[ OPEN ]"
+							: "[ About Us ]"
+						: ""}
 				</motion.div>
 			)}
 		</div>
