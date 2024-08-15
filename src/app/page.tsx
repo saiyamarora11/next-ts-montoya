@@ -1,5 +1,6 @@
 import {
 	Header,
+	MagicCursor,
 	HeroSection,
 	CardScrollSection,
 	FeatureSection,
@@ -11,6 +12,7 @@ import {
 export default function Home() {
 	return (
 		<main className="flex min-h-screen flex-col items-center">
+			<MagicCursor />
 			<Header />
 			<HeroSection />
 			<CardScrollSection />

@@ -6,9 +6,18 @@ import {
 
 const HeroSection = () => {
 	return (
-		<div className="flex h-screen flex-col items-center justify-center bg-black text-center">
-			<AnimatedLetters />
-			<HeroSectionDescription />
+		<div className="hero-section-container">
+			<div className="p-10">
+				<AnimatedLetters />
+				<HeroSectionDescription />
+			</div>
+			<div className="hero-footer">
+				<div>
+					<button>Scroll to Explore</button>
+					<button></button>
+				</div>
+				<p>Featured Projects</p>
+			</div>
 		</div>
 	);
 };

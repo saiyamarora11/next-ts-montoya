@@ -14,9 +14,9 @@ const config: Config = {
 			},
 			fontSize: {
 				"responsive-sm": "6rem",
-				"responsive-md": "8rem",
-				"responsive-lg": "12rem",
-				"responsive-xl": "18rem",
+				"responsive-md": "10rem",
+				"responsive-lg": "14rem",
+				"responsive-xl": "20rem",
 			},
 		},
 	},

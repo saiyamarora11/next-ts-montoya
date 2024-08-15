@@ -5,13 +5,13 @@ const letters = "MONTOYA".split("");
 
 const AnimatedLetters = () => {
 	return (
-		<div className="flex justify-center">
+		<div className="flex items-end justify-center">
 			{letters.map((letter, index) => (
 				<motion.div
 					key={index}
 					className="animation-letters-style"
 					whileHover={{
-						scaleY: 1.3,
+						scaleY: 1.5,
 						originY: 0.75,
 						transition: { duration: 0.5 },
 					}}>

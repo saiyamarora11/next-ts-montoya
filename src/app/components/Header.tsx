@@ -6,14 +6,14 @@ import { Bars2Icon } from "@heroicons/react/24/solid";
 
 const Header = () => {
 	return (
-		<header className="sticky top-0 z-[99] flex w-full items-center justify-between bg-black px-10 py-4 text-white">
+		<header className="header">
 			<div className="flex items-center">
-				<div className="relative !h-12 !w-12">
+				<div className="relative !h-14 !w-14">
 					<Image src={Logo} alt="Logo" fill objectFit="contain" />
 				</div>
 			</div>
-			<div className="text-md flex items-center space-x-4">
-				<span>Menu</span>
+			<div className="flex items-center space-x-8 text-sm">
+				<span className="hidden sm:block">Menu</span>
 				<button>
 					<Bars2Icon className="size-6 text-white" />
 				</button>

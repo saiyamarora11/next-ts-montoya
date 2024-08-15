@@ -1,7 +1,7 @@
 import Header from "./Header";
 import Card from "./Card";
 import CardScrollSection from "./CardScrollSection";
-import CustomCursor from "./CustomCursor";
+import MagicCursor from "./MagicCursor";
 import FeatureSection from "./FeatureSection";
 import HeroSection from "./HeroSection";
 import OverlayFooter from "./OverlayFooter";
@@ -13,7 +13,7 @@ export {
 	Header,
 	Card,
 	CardScrollSection,
-	CustomCursor,
+	MagicCursor,
 	FeatureSection,
 	HeroSection,
 	OverlayFooter,
