@@ -54,6 +54,9 @@ body {
 .overlay-footer {
 	@apply absolute bottom-8 flex w-full items-baseline justify-between px-14 text-white;
 }
+.card-container {
+	@apply sticky h-[80vh] w-[90vw] cursor-pointer overflow-hidden rounded-xl bg-inherit;
+}
 
 .tag-overlay {
 	@apply rounded-full bg-white bg-opacity-40 px-4 py-1 text-sm text-white;

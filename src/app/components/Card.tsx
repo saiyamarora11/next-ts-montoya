@@ -60,7 +60,7 @@ const Card = ({ imgUrl, title }: CardProps) => {
 	return (
 		<div
 			ref={container}
-			className="sticky h-[80vh] w-[90vw] cursor-pointer overflow-hidden rounded-xl bg-inherit"
+			className="card-container"
 			style={{
 				top: `${vertMargin}vh`,
 				height: `${100 - 2 * vertMargin}vh`,
