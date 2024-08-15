@@ -1,12 +1,11 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import { motion, useMotionValue, useSpring } from "framer-motion";
-import useCursorStore from "@/app/store/CursorStore";
+import useCursorStore from "@/app/store/cursorStore";
 
 const MagicCursor: React.FC = () => {
-	const { isCursorHidden } = useCursorStore();
-	const cursorRadius = 20;
+	const { isCursorHidden, cursorType } = useCursorStore();
 
 	const mouse = {
 		x: useMotionValue(0),
@@ -18,6 +17,7 @@ const MagicCursor: React.FC = () => {
 		x: useSpring(mouse.x, smoothOptions),
 		y: useSpring(mouse.y, smoothOptions),
 	};
+	const cursorRadius = cursorType ? 120 : 20;
 
 	useEffect(() => {
 		const handleMouseMove = (e: MouseEvent) => {
@@ -31,6 +31,10 @@ const MagicCursor: React.FC = () => {
 		};
 	}, [mouse.x, mouse.y, cursorRadius]);
 
+	useEffect(() => {
+		console.log(cursorType);
+	}, [cursorType]);
+
 	return (
 		<div>
 			{!isCursorHidden && (
@@ -40,7 +44,11 @@ const MagicCursor: React.FC = () => {
 						top: smoothMouse.y,
 						transition: "transform 0.2s ease",
 					}}
-					className="magic-cursor"></motion.div>
+					className="magic-cursor">
+					{cursorType && cursorType === "card"
+						? "[ OPEN ]"
+						: "[ About Us ]"}
+				</motion.div>
 			)}
 		</div>
 	);

@@ -4,6 +4,7 @@ import { useInView, useScroll } from "framer-motion";
 import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
 import OverlayFooter from "./OverlayFooter";
+import useCursorStore from "@/app/store/cursorStore";
 
 type CardProps = {
 	imgUrl: string;
@@ -11,6 +12,7 @@ type CardProps = {
 };
 
 const Card = ({ imgUrl, title }: CardProps) => {
+	const { setCursorType } = useCursorStore();
 	const vertMargin = 10;
 	const container = useRef<HTMLDivElement | null>(null);
 	const [maxScrollY, setMaxScrollY] = useState<number>(Infinity);
@@ -58,13 +60,15 @@ const Card = ({ imgUrl, title }: CardProps) => {
 	return (
 		<div
 			ref={container}
-			className="sticky h-[80vh] w-[90vw] overflow-hidden rounded-xl bg-neutral-200"
+			className="sticky h-[80vh] w-[90vw] cursor-pointer overflow-hidden rounded-xl bg-inherit"
 			style={{
 				top: `${vertMargin}vh`,
 				height: `${100 - 2 * vertMargin}vh`,
 				transform: `scale(${dynamicStyles.scale})`,
 				filter: `blur(${dynamicStyles.filter}px)`,
-			}}>
+			}}
+			onMouseEnter={() => setCursorType("card")}
+			onMouseLeave={() => setCursorType("default")}>
 			<Image
 				src={imgUrl}
 				alt="Card Image"

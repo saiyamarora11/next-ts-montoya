@@ -4,9 +4,9 @@ import React from "react";
 import Image from "next/image";
 import Logo from "../../../public/logo.png";
 import { Bars2Icon } from "@heroicons/react/24/solid";
-import useCursorStore from "@/app/store/CursorStore";
+import useCursorStore from "@/app/store/cursorStore";
 
-const Header = () => {
+const Header: React.FC = () => {
 	const { setIsCursorHidden } = useCursorStore();
 	return (
 		<header className="header">
@@ -14,8 +14,15 @@ const Header = () => {
 				<button
 					onMouseEnter={() => setIsCursorHidden(true)}
 					onMouseLeave={() => setIsCursorHidden(false)}
-					className="logo-button relative !h-14 !w-14">
-					<Image src={Logo} alt="Logo" fill objectFit="contain" />
+					className="logo-button relative !h-14 !w-14"
+					style={{ position: "relative" }}>
+					<Image
+						src={Logo}
+						alt="Logo"
+						fill
+						sizes="(max-width: 600px) 100vw, 50vw"
+						style={{ objectFit: "contain" }}
+					/>
 				</button>
 			</div>
 			<div className="flex items-center space-x-8 text-sm">

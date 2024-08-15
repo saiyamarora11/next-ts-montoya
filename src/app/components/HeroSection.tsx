@@ -3,6 +3,7 @@ import {
 	AnimatedLetters,
 	HeroSectionDescription,
 } from "@/app/components/HeroSectionComponents";
+import { ChevronDownIcon } from "@heroicons/react/24/solid";
 
 const HeroSection = () => {
 	return (
@@ -12,9 +13,11 @@ const HeroSection = () => {
 				<HeroSectionDescription />
 			</div>
 			<div className="hero-footer">
-				<div>
+				<div className="flex items-center gap-x-6">
 					<button>Scroll to Explore</button>
-					<button></button>
+					<button>
+						<ChevronDownIcon className="size-5 text-white" />
+					</button>
 				</div>
 				<p>Featured Projects</p>
 			</div>

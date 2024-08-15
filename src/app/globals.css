@@ -35,7 +35,7 @@ body {
 }
 
 .magic-cursor {
-	@apply pointer-events-none fixed z-[999] !h-10 !w-10 rotate-0 rounded-full border-2 border-gray-400 bg-transparent opacity-100;
+	@apply pointer-events-none fixed z-[999] flex h-28 w-28 rotate-0 items-center justify-center rounded-full border border-transparent bg-white bg-opacity-10 text-sm font-semibold backdrop-blur-lg;
 }
 
 .header {
