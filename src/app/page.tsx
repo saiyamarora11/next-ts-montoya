@@ -11,7 +11,7 @@ import {
 
 export default function Home() {
 	return (
-		<main className="flex min-h-screen flex-col items-center">
+		<main className="flex min-h-screen flex-col items-center px-6 sm:px-14">
 			<MagicCursor />
 			<Header />
 			<HeroSection />

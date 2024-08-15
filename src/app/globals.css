@@ -35,11 +35,11 @@ body {
 }
 
 .magic-cursor {
-	@apply pointer-events-none fixed !h-10 !w-10 rotate-0 rounded-full border-2 border-gray-400 bg-transparent opacity-100;
+	@apply pointer-events-none fixed z-[999] !h-10 !w-10 rotate-0 rounded-full border-2 border-gray-400 bg-transparent opacity-100;
 }
 
 .header {
-	@apply sticky top-0 z-[99] mt-4 flex h-14 w-full items-center justify-between bg-black px-6 text-white sm:px-14;
+	@apply sticky top-0 z-[99] flex h-14 w-full items-center justify-between bg-black pt-6 text-white;
 }
 
 .hero-section-container {
