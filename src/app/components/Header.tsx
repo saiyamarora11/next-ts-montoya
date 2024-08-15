@@ -1,16 +1,22 @@
 "use client";
+
 import React from "react";
 import Image from "next/image";
 import Logo from "../../../public/logo.png";
 import { Bars2Icon } from "@heroicons/react/24/solid";
+import useCursorStore from "@/app/store/CursorStore";
 
 const Header = () => {
+	const { setIsCursorHidden } = useCursorStore();
 	return (
 		<header className="header">
 			<div className="flex items-center">
-				<div className="relative !h-14 !w-14">
+				<button
+					onMouseEnter={() => setIsCursorHidden(true)}
+					onMouseLeave={() => setIsCursorHidden(false)}
+					className="logo-button relative !h-14 !w-14">
 					<Image src={Logo} alt="Logo" fill objectFit="contain" />
-				</div>
+				</button>
 			</div>
 			<div className="flex items-center space-x-8 text-sm">
 				<span className="hidden sm:block">Menu</span>
