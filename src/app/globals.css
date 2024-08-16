@@ -65,8 +65,12 @@ body {
 	@apply flex h-screen flex-col items-center justify-center bg-black text-center;
 }
 
+.skill-text-style {
+	@apply flex h-full items-center justify-center font-sixCaps text-[3rem] font-medium leading-none sm:text-[4rem] md:text-[5rem] lg:text-[7rem];
+}
+
 .skills-list {
-	@apply flex h-full flex-col items-center justify-center gap-y-5 p-4 text-center;
+	@apply flex flex-col items-center justify-center gap-y-3 text-center;
 }
 
 .animation-letters-style {

@@ -26,7 +26,7 @@ const SkillsCoveredSection = () => {
 			<div className="sticky top-10 mt-10 text-center text-sm">
 				OUR SKILLS COVER
 			</div>
-			<motion.div style={{ y: autoScroll }} className="mt-20">
+			<motion.div style={{ y: autoScroll }}>
 				<ul className="skills-list">
 					{[
 						"WEB DESIGN",
