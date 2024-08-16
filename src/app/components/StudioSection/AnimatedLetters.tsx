@@ -5,11 +5,11 @@ const letters = "OUR STUDIO".split("");
 
 const AnimatedLetters = () => {
 	return (
-		<div className="flex justify-center">
+		<div className="-mt-20 flex justify-center">
 			{letters.map((letter, index) => (
 				<motion.div
 					key={index}
-					className="animation-letters-style"
+					className={`animation-letters-style ${letter === " " ? "mx-6" : ""}`}
 					whileHover={{
 						scaleY: 1.3,
 						originY: 0.2,
