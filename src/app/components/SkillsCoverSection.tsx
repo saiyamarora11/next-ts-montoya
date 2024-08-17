@@ -25,8 +25,13 @@ const SkillsCoveredSection = () => {
 						"SOCIAL MEDIA MANAGEMENT",
 						"DATA ANALYTICS",
 						"CONTENT CREATION",
-					].map((skill, index) => (
-						<Skill key={index}>{skill}</Skill>
+					].map((skill, index, array) => (
+						<Skill
+							key={index}
+							isFirst={index === 0}
+							isLast={index === array.length - 1}>
+							{skill}
+						</Skill>
 					))}
 				</ul>
 			</motion.div>
