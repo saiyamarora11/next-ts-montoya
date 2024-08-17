@@ -72,8 +72,7 @@ const Card = ({ imgUrl, title }: CardProps) => {
 			<Image
 				src={imgUrl}
 				alt="Card Image"
-				width={1920}
-				height={1080}
+				fill
 				className="object-cover"
 				sizes="90vw"
 			/>
