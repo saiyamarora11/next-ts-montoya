@@ -31,10 +31,6 @@ const MagicCursor: React.FC = () => {
 		};
 	}, [mouse.x, mouse.y, cursorRadius]);
 
-	useEffect(() => {
-		console.log(cursorType);
-	}, [cursorType]);
-
 	return (
 		<div className="hidden md:block">
 			{!isCursorHidden && (
