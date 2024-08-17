@@ -13,7 +13,7 @@ const SkillsCoveredSection = () => {
 				OUR SKILLS COVER
 			</div>
 			<motion.div>
-				<ul className="skills-list">
+				<ul className="skills-list border-2 border-white">
 					{[
 						"WEB DESIGN",
 						"MOBILE APP DEVELOPMENT",

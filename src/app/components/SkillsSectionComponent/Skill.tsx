@@ -11,12 +11,12 @@ const Skill = ({ children }: { children: ReactNode }) => {
 
 	const opacity = useTransform(
 		scrollYProgress,
-		[0, 0.5, 1],
+		[0, 0.7, 1],
 		[0.4, 0.4, 1],
 	);
 	const color = useTransform(
 		scrollYProgress,
-		[0, 0.5, 1],
+		[0, 0.7, 1],
 		["#FFFFFF20", "#FFFFFF20", "#FFFFFF"],
 	);
 
