@@ -13,7 +13,9 @@ const SkillsCoveredSection = () => {
 	}, [isInView, setScrollStatus]);
 
 	return (
-		<div ref={container} className="max-h-full overflow-y-auto">
+		<div
+			ref={container}
+			className="hidescroll max-h-full overflow-y-auto">
 			<div className="skills-cover-text">OUR SKILLS COVER</div>
 			<motion.div>
 				<ul className="skills-list">

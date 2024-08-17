@@ -1,4 +1,4 @@
-import { useEffect, useRef } from "react";
+import { useCallback, useEffect, useRef } from "react";
 import Lenis from "lenis";
 import useScrollStore from "@/app/store/scrollStore";
 
@@ -6,30 +6,36 @@ const useLenis = () => {
 	const lenis = useRef<Lenis | null>(null);
 	const { inSkillsSection } = useScrollStore();
 
-	const initializeLenis = (lerp: number) => {
-		lenis.current = new Lenis({
-			lerp,
-			smoothWheel: true,
-			syncTouch: true,
-			syncTouchLerp: 0.1,
-			wheelMultiplier: 0.5,
-			touchMultiplier: 0.5,
-		});
+	const initializeLenis = useCallback(
+		(lerp: number) => {
+			const isMobile = () => window.innerWidth <= 768;
+			const wheelMultiplier = isMobile() ? 0.3 : 0.5;
+			const touchMultiplier = isMobile() ? 0.3 : 0.5;
 
-		const raf = (time: number) => {
-			lenis.current?.raf(time);
+			lenis.current = new Lenis({
+				lerp,
+				smoothWheel: true,
+				syncTouch: true,
+				syncTouchLerp: 0.1,
+				wheelMultiplier,
+				touchMultiplier,
+			});
+
+			const raf = (time: number) => {
+				lenis.current?.raf(time);
+				requestAnimationFrame(raf);
+			};
+
 			requestAnimationFrame(raf);
-		};
-
-		requestAnimationFrame(raf);
-	};
+		},
+		[lenis],
+	);
 
 	useEffect(() => {
 		initializeLenis(0.1);
 
 		return () => lenis.current?.destroy();
-	}, []);
-
+	}, [initializeLenis]);
 	useEffect(() => {
 		if (lenis.current) {
 			console.log(
@@ -38,7 +44,7 @@ const useLenis = () => {
 			lenis.current.destroy();
 			initializeLenis(inSkillsSection ? 0.005 : 0.1);
 		}
-	}, [inSkillsSection]);
+	}, [inSkillsSection, initializeLenis]);
 
 	return { adjustScrollSpeed: lenis.current?.options.lerp };
 };
