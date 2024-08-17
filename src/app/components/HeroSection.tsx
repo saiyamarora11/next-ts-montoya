@@ -14,7 +14,7 @@ const HeroSection = () => {
 				<HeroSectionDescription />
 			</div>
 			<div className="hero-footer">
-				<div className="flex items-center gap-x-6">
+				<div className="z-[100] flex cursor-pointer items-center gap-x-6">
 					<button>Scroll to Explore</button>
 					<MagneticButton>
 						<button>
