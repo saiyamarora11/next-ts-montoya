@@ -15,7 +15,7 @@ import useLenis from "@/app/hooks/useLenis";
 export default function Home() {
 	useLenis();
 	return (
-		<main className="container-primary">
+		<main className="container-primary relative">
 			<MagicCursor />
 			<Header />
 			<HeroSection />
