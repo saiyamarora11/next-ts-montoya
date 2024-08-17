@@ -1,3 +1,5 @@
+"use client";
+
 import {
 	Header,
 	MagicCursor,
@@ -8,10 +10,12 @@ import {
 	StudioBanner,
 	FooterComponent,
 } from "@/app/components";
+import useLenis from "@/app/hooks/useLenis";
 
 export default function Home() {
+	useLenis();
 	return (
-		<main className="flex min-h-screen flex-col items-center px-6 sm:px-14">
+		<main className="container-primary">
 			<MagicCursor />
 			<Header />
 			<HeroSection />
