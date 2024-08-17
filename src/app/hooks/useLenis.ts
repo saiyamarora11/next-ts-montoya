@@ -1,45 +1,42 @@
-import { useCallback, useEffect, useRef } from "react";
+import { useEffect, useRef } from "react";
 import Lenis from "lenis";
 import useScrollStore from "@/app/store/scrollStore";
 
 const useLenis = () => {
-	const lenis = useRef<Lenis | null>(null);
 	const { inSkillsSection } = useScrollStore();
+	const lenisRef = useRef<Lenis | null>(null);
 
-	const initializeLenis = useCallback(
-		(lerp: number) => {
-			lenis.current = new Lenis({
+	useEffect(() => {
+		const initializeLenis = () => {
+			const lerp = inSkillsSection ? 0.005 : 0.1;
+
+			if (lenisRef.current) {
+				lenisRef.current.destroy();
+			}
+
+			lenisRef.current = new Lenis({
 				lerp,
 				smoothWheel: true,
 				syncTouch: true,
 				syncTouchLerp: 0.1,
 			});
+
 			const raf = (time: number) => {
-				lenis.current?.raf(time);
+				lenisRef.current?.raf(time);
 				requestAnimationFrame(raf);
 			};
 
 			requestAnimationFrame(raf);
-		},
-		[lenis],
-	);
+		};
 
-	useEffect(() => {
-		initializeLenis(0.1);
+		initializeLenis();
 
-		return () => lenis.current?.destroy();
-	}, [initializeLenis]);
-	useEffect(() => {
-		if (lenis.current) {
-			console.log(
-				`Setting scroll speed to ${inSkillsSection ? "slow" : "normal"}`,
-			);
-			lenis.current.destroy();
-			initializeLenis(inSkillsSection ? 0.005 : 0.1);
-		}
+		return () => {
+			lenisRef.current?.destroy();
+		};
 	}, [inSkillsSection]);
 
-	return { adjustScrollSpeed: lenis.current?.options.lerp };
+	return { adjustScrollSpeed: lenisRef.current?.options.lerp };
 };
 
 export default useLenis;

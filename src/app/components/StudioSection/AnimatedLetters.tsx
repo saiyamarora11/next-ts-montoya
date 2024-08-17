@@ -14,6 +14,11 @@ const AnimatedLetters = () => {
 						scaleY: 1.3,
 						originY: 0.2,
 						transition: { duration: 0.5 },
+					}}
+					whileTap={{
+						scaleY: 1.3,
+						originY: 0.2,
+						transition: { duration: 0.5 },
 					}}>
 					{letter}
 				</motion.div>
