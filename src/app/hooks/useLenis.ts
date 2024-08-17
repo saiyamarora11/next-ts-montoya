@@ -6,9 +6,9 @@ const useLenis = () => {
 	const lenis = useRef<Lenis | null>(null);
 	const { inSkillsSection } = useScrollStore();
 
-	useEffect(() => {
+	const initializeLenis = (lerp: number) => {
 		lenis.current = new Lenis({
-			lerp: 0.1,
+			lerp,
 			smoothWheel: true,
 			syncTouch: true,
 			syncTouchLerp: 0.1,
@@ -22,17 +22,21 @@ const useLenis = () => {
 		};
 
 		requestAnimationFrame(raf);
+	};
+
+	useEffect(() => {
+		initializeLenis(0.1);
 
 		return () => lenis.current?.destroy();
 	}, []);
 
 	useEffect(() => {
 		if (lenis.current) {
-			if (inSkillsSection) {
-				lenis.current.options.lerp = 0.005;
-			} else {
-				lenis.current.options.lerp = 0.1;
-			}
+			console.log(
+				`Setting scroll speed to ${inSkillsSection ? "slow" : "normal"}`,
+			);
+			lenis.current.destroy();
+			initializeLenis(inSkillsSection ? 0.005 : 0.1);
 		}
 	}, [inSkillsSection]);
 
