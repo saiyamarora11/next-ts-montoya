@@ -95,7 +95,7 @@ body {
 
 /* studio-section */
 .studio-section {
-	@apply flex h-screen flex-col items-center justify-center bg-black text-center;
+	@apply mt-40 flex h-screen flex-col items-center justify-center bg-black text-center;
 }
 
 .footer-style {

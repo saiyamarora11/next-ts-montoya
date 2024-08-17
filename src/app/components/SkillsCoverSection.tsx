@@ -1,14 +1,21 @@
-"use client";
-import React, { useRef } from "react";
-import { motion } from "framer-motion";
+import React, { useRef, useEffect } from "react";
+import { motion, useInView } from "framer-motion";
 import Skill from "@/app/components/SkillsSectionComponent/Skill";
-// import Lenis from "lenis";
+import useScrollStore from "@/app/store/scrollStore";
 
 const SkillsCoveredSection = () => {
 	const container = useRef<HTMLDivElement>(null);
+	const { setScrollStatus } = useScrollStore();
+	const isInView = useInView(container, { amount: 0.5 });
+
+	useEffect(() => {
+		setScrollStatus(isInView);
+	}, [isInView, setScrollStatus]);
 
 	return (
-		<div ref={container} className="max-h-full overflow-y-auto">
+		<div
+			ref={container}
+			className="skills-section max-h-full overflow-y-auto">
 			<div className="!sticky top-20 z-[100] mb-20 mt-10 text-center text-sm font-bold">
 				OUR SKILLS COVER
 			</div>
