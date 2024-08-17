@@ -17,7 +17,7 @@ const MagicCursor: React.FC = () => {
 		x: useSpring(mouse.x, smoothOptions),
 		y: useSpring(mouse.y, smoothOptions),
 	};
-	const cursorRadius = cursorType ? 120 : 20;
+	const cursorRadius = cursorType ? 120 : 45;
 
 	useEffect(() => {
 		const handleMouseMove = (e: MouseEvent) => {
