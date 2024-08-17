@@ -15,8 +15,10 @@ const SkillsCoveredSection = () => {
 	return (
 		<div
 			ref={container}
-			className="hidescroll max-h-full overflow-y-auto">
-			<div className="skills-cover-text">OUR SKILLS COVER</div>
+			className="relative max-h-full overflow-y-visible">
+			<div className="sticky top-20 z-[100] mb-20 mt-10 text-center text-sm font-bold">
+				OUR SKILLS COVER
+			</div>
 			<motion.div>
 				<ul className="skills-list">
 					{[
