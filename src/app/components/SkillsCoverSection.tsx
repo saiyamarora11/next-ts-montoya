@@ -13,14 +13,10 @@ const SkillsCoveredSection = () => {
 	}, [isInView, setScrollStatus]);
 
 	return (
-		<div
-			ref={container}
-			className="skills-section max-h-full overflow-y-auto">
-			<div className="!sticky top-20 z-[100] mb-20 mt-10 text-center text-sm font-bold">
-				OUR SKILLS COVER
-			</div>
+		<div ref={container} className="max-h-full overflow-y-auto">
+			<div className="skills-cover-text">OUR SKILLS COVER</div>
 			<motion.div>
-				<ul className="skills-list border-2 border-white">
+				<ul className="skills-list">
 					{[
 						"WEB DESIGN",
 						"MOBILE APP DEVELOPMENT",
