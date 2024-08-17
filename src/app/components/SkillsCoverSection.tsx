@@ -1,5 +1,5 @@
 "use client";
-import React, { useRef } from "react";
+import React, { useEffect, useRef } from "react";
 import {
 	motion,
 	useScroll,
@@ -7,9 +7,29 @@ import {
 	useTransform,
 } from "framer-motion";
 import Skill from "@/app/components/SkillsSectionComponent/Skill";
+import Lenis from "lenis";
 
 const SkillsCoveredSection = () => {
 	const container = useRef<HTMLDivElement>(null);
+	useEffect(() => {
+		const lenis = new Lenis({
+			lerp: 0.05,
+			smoothWheel: true,
+			syncTouch: true,
+			syncTouchLerp: 0.1,
+			wheelMultiplier: 0.5,
+			touchMultiplier: 0.5,
+		});
+
+		function raf(time: number) {
+			lenis.raf(time);
+			requestAnimationFrame(raf);
+		}
+
+		requestAnimationFrame(raf);
+
+		return () => lenis.destroy();
+	}, []);
 	const { scrollYProgress } = useScroll({
 		target: container,
 		offset: ["start start", "end end"],

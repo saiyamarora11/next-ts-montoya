@@ -1,6 +1,7 @@
 "use client";
 import React from "react";
 import { ShareIcon, ChevronUpIcon } from "@heroicons/react/24/solid";
+import MagneticButton from "@/app/components/MagneticButton";
 
 const Footer = () => {
 	const scrollToTop = () => {
@@ -12,9 +13,12 @@ const Footer = () => {
 			<div
 				className="flex cursor-pointer items-center space-x-4"
 				onClick={scrollToTop}>
-				<span>
-					<ChevronUpIcon className="size-5 text-white" />
-				</span>
+				<MagneticButton>
+					<button>
+						<ChevronUpIcon className="size-5 text-white" />
+					</button>
+				</MagneticButton>
+
 				<span className="hidden md:block">Back Top</span>
 			</div>
 			<div>2024 © ClaPat. All rights reserved.</div>
