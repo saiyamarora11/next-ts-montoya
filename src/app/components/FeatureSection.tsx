@@ -7,8 +7,8 @@ const FeatureSection = () => {
 	const { setIsCursorHidden } = useCursorStore();
 
 	return (
-		<div className="flex flex-col items-center justify-center bg-black text-center">
-			<p className="max-w-xl px-4 text-white opacity-40">
+		<div className="feature-section-containerr">
+			<p className="max-w-2xl px-4 text-white opacity-40">
 				CRAFTING WEBSITES WHERE THE ELEGANCE OF DESIGN INTERSECTS WITH
 				THE SCIENCE OF SELLING PRODUCTS.
 			</p>
