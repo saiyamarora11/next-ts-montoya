@@ -74,7 +74,7 @@ body {
 
 /* features-section */
 .feature-section-container {
-	@apply text-cente flex flex-col items-center justify-center bg-black;
+	@apply flex flex-col items-center justify-center bg-black text-center;
 }
 
 /* skills-section */
