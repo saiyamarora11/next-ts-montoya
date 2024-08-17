@@ -1,8 +1,6 @@
 "use client";
 
-import { useEffect } from "react";
 import Card from "./Card";
-import Lenis from "lenis";
 
 const images = [
 	{
@@ -28,17 +26,6 @@ const images = [
 ];
 
 const CardScrollSection = () => {
-	useEffect(() => {
-		const lenis = new Lenis();
-
-		function raf(time: number) {
-			lenis.raf(time);
-			requestAnimationFrame(raf);
-		}
-
-		requestAnimationFrame(raf);
-		return () => lenis.destroy();
-	}, []);
 	return (
 		<section className="relative flex flex-col gap-[10vh] py-[10vh]">
 			{images.map((img, idx) => (
