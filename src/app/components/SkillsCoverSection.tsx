@@ -23,7 +23,7 @@ const SkillsCoveredSection = () => {
 
 	return (
 		<div ref={container}>
-			<div className="sticky top-10 mt-10 text-center text-sm">
+			<div className="!sticky top-20 z-[100] mb-20 mt-10 text-center text-sm font-bold">
 				OUR SKILLS COVER
 			</div>
 			<motion.div style={{ y: autoScroll }}>

@@ -15,14 +15,16 @@ const Footer = () => {
 				<span>
 					<ChevronUpIcon className="size-5 text-white" />
 				</span>
-				<span>Back Top</span>
+				<span className="hidden md:block">Back Top</span>
 			</div>
 			<div>2024 © ClaPat. All rights reserved.</div>
-			<div className="flex items-center space-x-4">
-				<span>Follow Us</span>
-				<span>
-					<ShareIcon className="size-5 text-white" />
-				</span>
+			<div className="hidden md:block">
+				<div className="flex items-center space-x-4">
+					<span>Follow Us</span>
+					<span>
+						<ShareIcon className="size-5 text-white" />
+					</span>
+				</div>
 			</div>
 		</footer>
 	);

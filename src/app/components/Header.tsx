@@ -27,7 +27,7 @@ const Header: React.FC = () => {
 				</button>
 			</div>
 			<div className="flex items-center space-x-8 text-sm">
-				<span className="hidden sm:block">Menu</span>
+				<span className="hidden md:block">Menu</span>
 				<MagneticButton>
 					<button>
 						<Bars2Icon className="size-6 text-white" />

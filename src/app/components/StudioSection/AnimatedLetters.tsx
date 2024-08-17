@@ -9,7 +9,7 @@ const AnimatedLetters = () => {
 			{letters.map((letter, index) => (
 				<motion.div
 					key={index}
-					className={`animation-letters-style ${letter === " " ? "mx-6" : ""}`}
+					className={`animation-letters-style ${letter === " " ? "mx-3" : ""}`}
 					whileHover={{
 						scaleY: 1.3,
 						originY: 0.2,

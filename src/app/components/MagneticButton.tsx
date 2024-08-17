@@ -37,9 +37,9 @@ const MagneticButton: React.FC<FramerProps> = ({ children }) => {
 			animate={{ x, y }}
 			transition={{
 				type: "spring",
-				stiffness: 400,
-				damping: 10,
-				mass: 0.05,
+				stiffness: 300,
+				damping: 20,
+				mass: 0.5,
 			}}>
 			{children}
 		</motion.div>
