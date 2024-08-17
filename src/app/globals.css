@@ -61,7 +61,7 @@ body {
 	@apply font-sixCaps text-responsive-sm text-white sm:text-responsive-md md:text-responsive-lg lg:text-responsive-xl;
 }
 .hero-footer {
-	@apply absolute bottom-10 flex w-full items-center justify-between px-6 text-sm sm:px-14;
+	@apply absolute -bottom-10 flex w-full items-center justify-between text-sm;
 }
 
 /* cards-croll-section */

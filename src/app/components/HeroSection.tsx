@@ -15,7 +15,7 @@ const HeroSection = () => {
 		}
 	};
 	return (
-		<div className="hero-section-container">
+		<div className="hero-section-container relative">
 			<div className="p-10">
 				<AnimatedLetters />
 				<HeroSectionDescription />
