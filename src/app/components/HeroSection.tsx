@@ -5,8 +5,15 @@ import {
 } from "@/app/components/HeroSectionComponents";
 import { ChevronDownIcon } from "@heroicons/react/24/solid";
 import MagneticButton from "@/app/components/MagneticButton";
+import useScrollStore from "@/app/store/scrollStore";
 
 const HeroSection = () => {
+	const { firstCardRef } = useScrollStore();
+	const scrollToCard = () => {
+		if (firstCardRef?.current) {
+			firstCardRef.current.scrollIntoView({ behavior: "smooth" });
+		}
+	};
 	return (
 		<div className="hero-section-container">
 			<div className="p-10">
@@ -14,7 +21,9 @@ const HeroSection = () => {
 				<HeroSectionDescription />
 			</div>
 			<div className="hero-footer">
-				<div className="z-[100] flex cursor-pointer items-center gap-x-6">
+				<div
+					onClick={scrollToCard}
+					className="z-[100] flex cursor-pointer items-center gap-x-6">
 					<button>Scroll to Explore</button>
 					<MagneticButton>
 						<button>
