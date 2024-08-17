@@ -84,7 +84,7 @@ body {
 
 /* skills-section */
 .skills-list {
-	@apply flex flex-col items-center justify-center gap-y-3 border-2 border-white text-center;
+	@apply flex flex-col items-center justify-center gap-y-3 text-center;
 }
 .skill-text-style {
 	@apply flex h-full items-center justify-center font-sixCaps text-[4rem] font-medium leading-none md:text-[6rem] lg:text-[7rem];
